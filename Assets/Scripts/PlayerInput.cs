@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
 	public Player m_player;
 	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
+    public Animator anim;
 
 	public bool m_cooldown = false; // True: in cooldown, False: not in cooldown.
 	public float m_cooldownLength = 2.3f; // Length of cooldown time.
