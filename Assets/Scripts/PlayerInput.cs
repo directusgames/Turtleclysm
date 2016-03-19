@@ -5,7 +5,7 @@ public class PlayerInput : MonoBehaviour
 {
 	public Player m_player;
 	public float m_speed;
-	public Transform m_playerPos;
+	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
 
 	public bool m_cooldown; // True: in cooldown, False: not in cooldown.
@@ -21,7 +21,7 @@ public class PlayerInput : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		m_speed = 5f;
+		//m_speed = 5f;
 		m_cooldownLength = 2.3f;
 		m_cooldown = false;
 	}
@@ -71,8 +71,8 @@ public class PlayerInput : MonoBehaviour
 				secondPressPos = new Vector2 (t.position.x, t.position.y);
 				
 				//create vector from the two points
-				currentSwipe = new Vector3 (secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
-				
+				currentSwipe = new Vector3 (secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y, 0);
+			
 				//normalize the 2d vector
 				currentSwipe.Normalize ();
 				

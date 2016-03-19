@@ -1161,12 +1161,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 236112430}
-  - 114: {fileID: 236112434}
-  - 50: {fileID: 236112433}
-  - 114: {fileID: 236112432}
   - 95: {fileID: 236112429}
   m_Layer: 0
-  m_Name: Franklin
+  m_Name: Turtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,64 +1193,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236112428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 503314596}
   - {fileID: 714740355}
   - {fileID: 301819959}
   - {fileID: 734458840}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 585329042}
   m_RootOrder: 1
---- !u!114 &236112432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 236112428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_player: {fileID: 236112434}
-  m_speed: 5
-  m_playerPos: {fileID: 236112430}
-  m_rigidBody: {fileID: 236112433}
-  m_cooldown: 0
-  m_cooldownLength: 0
-  m_timeWaited: 0
-  m_debugKeyboard: 1
---- !u!50 &236112433
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 236112428}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &236112434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 236112428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f8f14ad5b96fe48b1a962e70829340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_size: 0
-  m_depth: 0
 --- !u!1 &267978419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1406,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 236112430}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!212 &301819960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1591,6 +1538,7 @@ GameObject:
   - 64: {fileID: 363504834}
   - 23: {fileID: 363504833}
   - 114: {fileID: 363504832}
+  - 95: {fileID: 363504837}
   m_Layer: 0
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -1668,6 +1616,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 985583546}
   m_RootOrder: 97
+--- !u!95 &363504837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363504831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 426355cdddff46c408e78ab8b467853b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &374153280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2073,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
-  m_Father: {fileID: 236112430}
+  m_Father: {fileID: 585329042}
   m_RootOrder: 0
 --- !u!1 &505322879
 GameObject:
@@ -2315,6 +2280,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &585329041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 585329042}
+  - 114: {fileID: 585329045}
+  - 50: {fileID: 585329044}
+  - 114: {fileID: 585329043}
+  m_Layer: 0
+  m_Name: Franklin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585329042
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585329041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children:
+  - {fileID: 503314596}
+  - {fileID: 236112430}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &585329043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585329041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_player: {fileID: 585329045}
+  m_speed: 5
+  turtleImage: {fileID: 236112430}
+  m_rigidBody: {fileID: 585329044}
+  m_cooldown: 0
+  m_cooldownLength: 0
+  m_timeWaited: 0
+  m_debugKeyboard: 1
+--- !u!50 &585329044
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585329041}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &585329045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585329041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f8f14ad5b96fe48b1a962e70829340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_size: 0
+  m_depth: 0
 --- !u!1 &595627662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3634,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 236112430}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!212 &714740356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3735,7 +3781,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 236112430}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!212 &734458841
 SpriteRenderer:
   m_ObjectHideFlags: 0
