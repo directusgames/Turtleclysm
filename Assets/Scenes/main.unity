@@ -2324,13 +2324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 585329045}
-  m_speed: 5
+  m_speed: 16
   turtleImage: {fileID: 236112430}
   m_rigidBody: {fileID: 585329044}
   m_cooldown: 0
   m_cooldownLength: 0
   m_timeWaited: 0
-  m_debugKeyboard: 1
+  m_debugKeyboard: 0
 --- !u!50 &585329044
 Rigidbody2D:
   serializedVersion: 2
@@ -2340,7 +2340,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 585329041}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 2
   m_AngularDrag: 0
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -4716,7 +4716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &985583546
 Transform:
   m_ObjectHideFlags: 0
