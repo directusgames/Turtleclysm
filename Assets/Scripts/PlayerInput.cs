@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerInput : MonoBehaviour
 {
 	public Transform m_playerPos;
+	public Player m_player;
+	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
 
 	public bool m_cooldown = false; // True: in cooldown, False: not in cooldown.
@@ -17,6 +19,9 @@ public class PlayerInput : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		//m_speed = 5f;
+		m_cooldownLength = 2.3f;
+		m_cooldown = false;
 	}
 
 	void Update() {
