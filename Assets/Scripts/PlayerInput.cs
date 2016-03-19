@@ -23,7 +23,6 @@ public class PlayerInput : MonoBehaviour {
 			moveVertical * m_speed,
 			0f
 		);
-
 		// if (Input.GetKeyDown(KeyCode.W)) {
 		// }
 	}
