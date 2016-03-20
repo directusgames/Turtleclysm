@@ -39,10 +39,10 @@ public class PlayerInput : MonoBehaviour
 	void FixedUpdate ()
 	{
 		if (!m_cooldown) {
-			Debug.Log ("cooldown disegaged");
+			//Debug.Log ("cooldown disegaged");
 			swipeInput();
 		} else {
-			Debug.Log ("cooldown engaged");
+			//Debug.Log ("cooldown engaged");
 		}
 	}
 
@@ -52,7 +52,11 @@ public class PlayerInput : MonoBehaviour
 			Vector2 currentPos = m_playerPos.position;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(currentTouch.position);
 			Vector2 diffPos = new Vector2(worldPos.x, worldPos.y) - currentPos;
-			m_rigidBody.velocity = diffPos.normalized * m_speed;
+            float angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;			
+            
+            m_rigidBody.velocity = diffPos.normalized * m_speed;
+            turtleImage.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);           
+            
 			m_cooldown = true;
 			m_timeWaited = 0;
 		}
