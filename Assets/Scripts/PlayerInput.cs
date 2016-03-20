@@ -17,6 +17,7 @@ public class PlayerInput : MonoBehaviour
 
 	private Vector2 m_initialTouch;
 	public float m_speed = 1f;
+    public float depth;
 
 	// Use this for initialization
 	void Start ()
