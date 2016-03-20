@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
 	public Player m_player;
 	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
+    public ParticleSystem  bubbles;
     
     public Animator anim;
 
