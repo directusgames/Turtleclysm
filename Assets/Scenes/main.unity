@@ -480,7 +480,7 @@ MonoBehaviour:
   anim: {fileID: 236112429}
   m_cooldown: 0
   m_cooldownLength: 2.3
-  m_speed: 1
+  m_speed: 5
   depth: 0
 --- !u!50 &585329044
 Rigidbody2D:
@@ -491,7 +491,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 585329041}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1
   m_AngularDrag: 0
   m_GravityScale: 0
   m_IsKinematic: 0
