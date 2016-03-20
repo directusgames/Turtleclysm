@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 424810}
   - 212: {fileID: 21234500}
   - 95: {fileID: 9584430}
+  - 114: {fileID: 11487834}
   m_Layer: 0
   m_Name: jellyidle
   m_TagString: npc
@@ -38,7 +39,7 @@ Animator:
   m_GameObject: {fileID: 188070}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c06ff5a006f2f3044826f9db8465e9da, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -46,6 +47,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11487834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12915801a2c90840a5631640892f3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scale: 3
+  m_alwaysSmall: 0
 --- !u!212 &21234500
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -78,7 +92,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_scale
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188070}

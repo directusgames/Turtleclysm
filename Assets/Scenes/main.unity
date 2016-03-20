@@ -316,14 +316,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerPos: {fileID: 585329042}
-  m_player: {fileID: 585329045}
-  turtleImage: {fileID: 236112430}
-  m_rigidBody: {fileID: 585329044}
+  m_playerPos: {fileID: 0}
+  m_player: {fileID: 0}
+  turtleImage: {fileID: 0}
+  m_rigidBody: {fileID: 0}
   anim: {fileID: 0}
   m_cooldown: 0
-  m_cooldownLength: 0
-  m_speed: 16
+  m_cooldownLength: 2.29999995
+  m_speed: 1
   m_distanceThreshold: 115
 --- !u!50 &585329044
 Rigidbody2D:
@@ -395,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_npcList:
   - {fileID: 165476, guid: e75dc9945397c91499bd3e9c139b2bd7, type: 2}
+  - {fileID: 158250, guid: f98c437af9ea1cb4c85c1be4146267db, type: 2}
   - {fileID: 158250, guid: 3d5862fa2929d444fa2f77ab18317715, type: 2}
   - {fileID: 123098, guid: 281c46f8a9c2b344bb71016a43924bec, type: 2}
   - {fileID: 183652, guid: f55a69e5b959be245ab95e8381a28309, type: 2}
@@ -421,6 +422,13 @@ MonoBehaviour:
   - {fileID: 168242, guid: ab96fd58494120243a4b3242935c3a44, type: 2}
   - {fileID: 190390, guid: 60db07ec19dca5543b2088569ef7cc69, type: 2}
   - {fileID: 127828, guid: 4048fabeb75ac184dbdde22da41bca5d, type: 2}
+  m_spawn: 0
+  m_spawnPosItr: 0
+  m_spawnPositions:
+  - {x: 11, y: 7, z: -1}
+  - {x: 11, y: -7, z: -1}
+  - {x: -11, y: 7, z: -1}
+  - {x: -11, y: -7, z: -1}
 --- !u!1 &714740354
 GameObject:
   m_ObjectHideFlags: 0

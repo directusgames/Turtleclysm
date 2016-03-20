@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 467352}
   - 212: {fileID: 21293956}
   - 95: {fileID: 9557960}
+  - 114: {fileID: 11460130}
   m_Layer: 0
   m_Name: jellyattack
   m_TagString: npc
@@ -38,7 +39,7 @@ Animator:
   m_GameObject: {fileID: 191478}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7d6fae3232b4caa4180f8d286cf2b0fa, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -46,6 +47,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11460130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12915801a2c90840a5631640892f3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scale: 3
+  m_alwaysSmall: 0
 --- !u!212 &21293956
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -78,7 +92,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_scale
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 191478}
