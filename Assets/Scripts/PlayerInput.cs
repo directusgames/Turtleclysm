@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour
 	public Player m_player;
 	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
+    public ParticleSystem  bubbles;
+    
     public Animator anim;
 
 	public bool m_cooldown = false; // True: in cooldown, False: not in cooldown.
@@ -15,7 +17,6 @@ public class PlayerInput : MonoBehaviour
 
 	private Vector2 m_initialTouch;
 	public float m_speed = 1f;
-	public float m_distanceThreshold = 115f;
 
 	// Use this for initialization
 	void Start ()
@@ -29,8 +30,16 @@ public class PlayerInput : MonoBehaviour
 		if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
 				m_cooldown = false;
+                anim.SetBool ("idle", true);
+                anim.SetBool ("slowingDown", false);
+                anim.CrossFade ("Idle", 0f);
 			} else {
 				m_timeWaited += Time.deltaTime;
+                if(m_timeWaited >= m_cooldownLength / 3)
+                {
+                    anim.SetBool ("propelled", false);
+                    anim.SetBool ("slowingDown", true);
+                }
 			}
 		}
     }
@@ -55,7 +64,10 @@ public class PlayerInput : MonoBehaviour
             float angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;			
             
             m_rigidBody.velocity = diffPos.normalized * m_speed;
-            turtleImage.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);           
+            turtleImage.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            anim.SetBool ("slowingDown", false);
+            anim.SetBool ("idle", false);
+            anim.SetBool ("propelled", true);
             
 			m_cooldown = true;
 			m_timeWaited = 0;
