@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 438308}
   - 212: {fileID: 21210752}
   - 114: {fileID: 11480332}
+  - 114: {fileID: 11435996}
   m_Layer: 0
   m_Name: fish2
   m_TagString: npc
@@ -29,6 +30,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11435996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30d2992ded668845af159ebfeb6a2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_animate: 1
+  m_wiggleLeft: 1
+  m_wiggleCooldown: 0
+  m_wiggleTime: 1
+  m_wiggleItr: 0
+  m_angleLeft: 10
+  m_angleRight: -10
 --- !u!114 &11480332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,6 +101,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_scale
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_wiggleTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -464,15 +464,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerPos: {fileID: 0}
-  m_player: {fileID: 0}
-  turtleImage: {fileID: 0}
-  m_rigidBody: {fileID: 0}
-  bubbles: {fileID: 0}
+  m_playerPos: {fileID: 585329042}
+  m_player: {fileID: 585329045}
+  turtleImage: {fileID: 236112430}
+  m_rigidBody: {fileID: 585329044}
+  bubbles: {fileID: 1292374776}
   anim: {fileID: 236112429}
   m_cooldown: 0
   m_cooldownLength: 2.29999995
-  m_speed: 1
+  m_speed: 4
 --- !u!50 &585329044
 Rigidbody2D:
   serializedVersion: 2
@@ -481,7 +481,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 585329041}
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1
   m_AngularDrag: 0
   m_GravityScale: 0
   m_IsKinematic: 0

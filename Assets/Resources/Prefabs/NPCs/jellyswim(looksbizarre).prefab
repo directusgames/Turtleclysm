@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21248022}
   - 95: {fileID: 9567294}
   - 114: {fileID: 11499420}
+  - 114: {fileID: 11418542}
   m_Layer: 0
   m_Name: jellyswim(looksbizarre)
   m_TagString: npc
@@ -47,6 +48,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11418542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30d2992ded668845af159ebfeb6a2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_animate: 1
+  m_wiggleLeft: 1
+  m_wiggleCooldown: 0
+  m_wiggleTime: 1
+  m_wiggleItr: 0
+  m_angleLeft: 10
+  m_angleRight: -10
 --- !u!114 &11499420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,6 +115,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_scale
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_wiggleTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
