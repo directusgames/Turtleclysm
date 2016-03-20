@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerPos: {fileID: 0}
+  m_playerPos: {fileID: 585329042}
   m_player: {fileID: 585329045}
   turtleImage: {fileID: 236112430}
   m_rigidBody: {fileID: 585329044}
