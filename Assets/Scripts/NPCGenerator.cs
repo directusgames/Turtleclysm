@@ -8,7 +8,7 @@ public class NPCGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (m_npcList.Count == 0 {
+		if (m_npcList.Count == 0) {
 			populatePrefabs();
 		}
 	}
