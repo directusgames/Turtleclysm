@@ -17,6 +17,7 @@ public class PlayerInput : MonoBehaviour
 
 	private Vector2 m_initialTouch;
 	public float m_speed = 1f;
+    public float depth;
 
 	// Use this for initialization
 	void Start ()
@@ -68,6 +69,8 @@ public class PlayerInput : MonoBehaviour
             anim.SetBool ("slowingDown", false);
             anim.SetBool ("idle", false);
             anim.SetBool ("propelled", true);
+            Debug.Log ("Propelled = true");
+            anim.CrossFade ("Propelling", 0f);
             
 			m_cooldown = true;
 			m_timeWaited = 0;
