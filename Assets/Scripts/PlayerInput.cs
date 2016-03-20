@@ -4,10 +4,10 @@ using System.Collections;
 public class PlayerInput : MonoBehaviour
 {
 	public Transform m_playerPos;
-	public Player m_player;
 	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
     public ParticleSystem  bubbles;
+    public Light oceanBrightness;
     
     public Animator anim;
 
@@ -17,20 +17,26 @@ public class PlayerInput : MonoBehaviour
 
 	private Vector2 m_initialTouch;
 	public float m_speed = 1f;
-    public float depth;
+    public float currentDepth;
+    public float originDepth;
 
 	// Use this for initialization
 	void Start ()
 	{
+        originDepth = m_playerPos.position.y;
 		//m_speed = 5f;
 		m_cooldownLength = 2.3f;
 		m_cooldown = false;
 	}
 
 	void Update() {
+    
+        currentDepth = originDepth - m_playerPos.position.y;
+        
 		if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
 				m_cooldown = false;
+                
                 anim.SetBool ("idle", true);
                 anim.SetBool ("slowingDown", false);
                 anim.CrossFade ("Idle", 0f);
