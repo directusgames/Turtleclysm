@@ -31,7 +31,7 @@ public class PlayerInput : MonoBehaviour
 
 	void Update() {
     
-        //currentDepth = originDepth - m_playerPos.position.y;
+        currentDepth = originDepth - m_playerPos.position.y;
         
 		if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
@@ -49,12 +49,6 @@ public class PlayerInput : MonoBehaviour
                 }
 			}
 		}
-        
-        //testing
-        if(Input.GetKey (KeyCode.DownArrow))
-        {
-            currentDepth += 0.1f;
-        }
     }
 
 	// Update is called once prior to each 'physics step'.
