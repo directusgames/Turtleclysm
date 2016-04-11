@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 	public Transform m_playerPos;
 	public Transform turtleImage;
 	public Rigidbody2D m_rigidBody;
-    public ParticleSystem  bubbles;
+    public ParticleSystem bubbles;
     public Light oceanBrightness;
     
     public Animator anim;
@@ -19,10 +19,17 @@ public class PlayerInput : MonoBehaviour
 	public float m_speed = 1f;
     public float currentDepth;
     public float originDepth;
+    
+    private ParticleSystem.EmissionModule em;
+    
+
 
 	// Use this for initialization
 	void Start ()
 	{
+        em = bubbles.emission;
+        em.enabled = false;
+        Debug.Log ("Bubbles set to false");
         originDepth = m_playerPos.position.y;
 		//m_speed = 5f;
 		m_cooldownLength = 2.3f;
@@ -31,11 +38,13 @@ public class PlayerInput : MonoBehaviour
 
 	void Update() {
     
-        //currentDepth = originDepth - m_playerPos.position.y;
+        currentDepth = originDepth - m_playerPos.position.y;
         
 		if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
 				m_cooldown = false;
+                
+                em.enabled = false;
                 
                 anim.SetBool ("idle", true);
                 anim.SetBool ("slowingDown", false);
@@ -51,10 +60,10 @@ public class PlayerInput : MonoBehaviour
 		}
         
         //testing
-        if(Input.GetKey (KeyCode.DownArrow))
-        {
-            currentDepth += 0.1f;
-        }
+//        if(Input.GetKey (KeyCode.DownArrow))
+//        {
+//            currentDepth += 0.1f;
+//        }
     }
 
 	// Update is called once prior to each 'physics step'.
@@ -62,7 +71,8 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (!m_cooldown) {
 			//Debug.Log ("cooldown disegaged");
-			swipeInput();
+            swipeInput();
+            
 		} else {
 			//Debug.Log ("cooldown engaged");
 		}
@@ -70,6 +80,7 @@ public class PlayerInput : MonoBehaviour
 
 	void swipeInput() {
 		if (Input.touchCount == 1) {
+            em.enabled = true;
 			Touch currentTouch = Input.GetTouch(0);
 			Vector2 currentPos = m_playerPos.position;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(currentTouch.position);
