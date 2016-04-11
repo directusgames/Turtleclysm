@@ -1,0 +1,630 @@
+fileFormatVersion: 2
+guid: 645ff6c69ee9e864dac195e9eb32c239
+timeCreated: 1460393526
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jellyfishv2_Spritesheet6x5_0
+    21300002: Jellyfishv2_Spritesheet6x5_1
+    21300004: Jellyfishv2_Spritesheet6x5_2
+    21300006: Jellyfishv2_Spritesheet6x5_3
+    21300008: Jellyfishv2_Spritesheet6x5_4
+    21300010: Jellyfishv2_Spritesheet6x5_5
+    21300012: Jellyfishv2_Spritesheet6x5_6
+    21300014: Jellyfishv2_Spritesheet6x5_7
+    21300016: Jellyfishv2_Spritesheet6x5_8
+    21300018: Jellyfishv2_Spritesheet6x5_9
+    21300020: Jellyfishv2_Spritesheet6x5_10
+    21300022: Jellyfishv2_Spritesheet6x5_11
+    21300024: Jellyfishv2_Spritesheet6x5_12
+    21300026: Jellyfishv2_Spritesheet6x5_13
+    21300028: Jellyfishv2_Spritesheet6x5_14
+    21300030: Jellyfishv2_Spritesheet6x5_15
+    21300032: Jellyfishv2_Spritesheet6x5_16
+    21300034: Jellyfishv2_Spritesheet6x5_17
+    21300036: Jellyfishv2_Spritesheet6x5_18
+    21300038: Jellyfishv2_Spritesheet6x5_19
+    21300040: Jellyfishv2_Spritesheet6x5_20
+    21300042: Jellyfishv2_Spritesheet6x5_21
+    21300044: Jellyfishv2_Spritesheet6x5_22
+    21300046: Jellyfishv2_Spritesheet6x5_23
+    21300048: Jellyfishv2_Spritesheet6x5_24
+    21300050: Jellyfishv2_Spritesheet6x5_25
+    21300052: Jellyfishv2_Spritesheet6x5_26
+    21300054: Jellyfishv2_Spritesheet6x5_27
+    21300056: Jellyfishv2_Spritesheet6x5_28
+    21300058: Jellyfishv2_Spritesheet6x5_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jellyfishv2_Spritesheet6x5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 58.30005}
+        - {x: -81, y: 35.30005}
+        - {x: -81, y: -51.69995}
+        - {x: 76, y: -51.69995}
+        - {x: 76, y: 35.30005}
+        - {x: 55, y: 58.30005}
+    - name: Jellyfishv2_Spritesheet6x5_1
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.724976, y: 58.30005}
+        - {x: -79.724976, y: 26.300049}
+        - {x: -79.724976, y: -53.69995}
+        - {x: 75.275024, y: -53.69995}
+        - {x: 75.275024, y: 26.300049}
+        - {x: 48.275024, y: 58.30005}
+    - name: Jellyfishv2_Spritesheet6x5_2
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65.44995, y: 58.30005}
+        - {x: -77.44995, y: 25.300049}
+        - {x: -77.44995, y: -55.69995}
+        - {x: 73.55005, y: -55.69995}
+        - {x: 73.55005, y: 40.30005}
+        - {x: 60.55005, y: 58.30005}
+    - name: Jellyfishv2_Spritesheet6x5_3
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29.325073, y: 58.30005}
+        - {x: -43.674927, y: 58.30005}
+        - {x: -74.67493, y: 35.30005}
+        - {x: -74.67493, y: -57.69995}
+        - {x: 72.32507, y: -57.69995}
+        - {x: 72.32507, y: 28.300049}
+        - {x: 68.32507, y: 41.30005}
+    - name: Jellyfishv2_Spritesheet6x5_4
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.8999, y: 58.30005}
+        - {x: -73.8999, y: 55.30005}
+        - {x: -74.8999, y: 47.30005}
+        - {x: -74.8999, y: -59.69995}
+        - {x: 70.1001, y: -59.69995}
+        - {x: 70.1001, y: 30.300049}
+        - {x: 45.100098, y: 58.30005}
+    - name: Jellyfishv2_Spritesheet6x5_5
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1600
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.375122, y: 58.30005}
+        - {x: -40.624878, y: 58.30005}
+        - {x: -72.62488, y: 37.30005}
+        - {x: -72.62488, y: -61.69995}
+        - {x: 69.37512, y: -61.69995}
+        - {x: 69.37512, y: 12.300049}
+        - {x: 64.37512, y: 47.30005}
+    - name: Jellyfishv2_Spritesheet6x5_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: 58.100037}
+        - {x: -72, y: 19.100037}
+        - {x: -72, y: -63.899963}
+        - {x: 66, y: -63.899963}
+        - {x: 67, y: -60.899963}
+        - {x: 67, y: 26.100037}
+        - {x: 50, y: 58.100037}
+    - name: Jellyfishv2_Spritesheet6x5_7
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64.724976, y: 58.100037}
+        - {x: -69.724976, y: 33.100037}
+        - {x: -69.724976, y: -65.89996}
+        - {x: 65.275024, y: -65.89996}
+        - {x: 65.275024, y: 13.100037}
+        - {x: 53.275024, y: 58.100037}
+    - name: Jellyfishv2_Spritesheet6x5_8
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64.55005, y: 14.100037}
+        - {x: 54.55005, y: 37.100037}
+        - {x: 25.550049, y: 58.100037}
+        - {x: -32.44995, y: 58.100037}
+        - {x: -39.44995, y: 56.100037}
+        - {x: -67.44995, y: 16.100037}
+        - {x: -67.44995, y: -65.89996}
+        - {x: -64.44995, y: -66.89996}
+        - {x: -55.44995, y: -66.89996}
+        - {x: -53.44995, y: -61.899963}
+        - {x: -21.449951, y: -66.89996}
+        - {x: 64.55005, y: -66.89996}
+    - name: Jellyfishv2_Spritesheet6x5_9
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.674927, y: 58.100037}
+        - {x: -65.67493, y: 23.100037}
+        - {x: -65.67493, y: -64.89996}
+        - {x: -60.674927, y: -68.89996}
+        - {x: 63.325073, y: -68.89996}
+        - {x: 63.325073, y: 51.100037}
+        - {x: 51.325073, y: 58.100037}
+    - name: Jellyfishv2_Spritesheet6x5_10
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.899902, y: 58.100037}
+        - {x: -64.8999, y: 10.100037}
+        - {x: -64.8999, y: -70.89996}
+        - {x: 60.100098, y: -70.89996}
+        - {x: 60.100098, y: 17.100037}
+        - {x: 37.100098, y: 58.100037}
+    - name: Jellyfishv2_Spritesheet6x5_11
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.624878, y: 58.100037}
+        - {x: -62.624878, y: 22.100037}
+        - {x: -62.624878, y: -73.89996}
+        - {x: 58.375122, y: -73.89996}
+        - {x: 58.375122, y: 17.100037}
+        - {x: 33.375122, y: 58.100037}
+    - name: Jellyfishv2_Spritesheet6x5_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 10.900024}
+        - {x: 37, y: 56.900024}
+        - {x: -44, y: 56.900024}
+        - {x: -59, y: 35.900024}
+        - {x: -62, y: 7.9000244}
+        - {x: -62, y: -76.099976}
+        - {x: 57, y: -76.099976}
+    - name: Jellyfishv2_Spritesheet6x5_13
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.724976, y: 56.900024}
+        - {x: -57.724976, y: 52.900024}
+        - {x: -59.724976, y: 28.900024}
+        - {x: -59.724976, y: -77.099976}
+        - {x: 55.275024, y: -77.099976}
+        - {x: 55.275024, y: 56.900024}
+    - name: Jellyfishv2_Spritesheet6x5_14
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.449951, y: 56.900024}
+        - {x: -51.44995, y: 39.900024}
+        - {x: -57.44995, y: 19.900024}
+        - {x: -57.44995, y: -79.099976}
+        - {x: 54.55005, y: -79.099976}
+        - {x: 54.55005, y: 31.900024}
+        - {x: 33.55005, y: 56.900024}
+    - name: Jellyfishv2_Spritesheet6x5_15
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.325073, y: 56.900024}
+        - {x: -34.674927, y: 56.900024}
+        - {x: -55.674927, y: 20.900024}
+        - {x: -55.674927, y: -81.099976}
+        - {x: 53.325073, y: -81.099976}
+        - {x: 53.325073, y: -3.0999756}
+        - {x: 48.325073, y: 32.900024}
+    - name: Jellyfishv2_Spritesheet6x5_16
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.899902, y: 56.900024}
+        - {x: -56.899902, y: 29.900024}
+        - {x: -57.899902, y: 7.9000244}
+        - {x: -57.899902, y: -79.099976}
+        - {x: 54.100098, y: -79.099976}
+        - {x: 54.100098, y: 56.900024}
+    - name: Jellyfishv2_Spritesheet6x5_17
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.375122, y: 56.900024}
+        - {x: -35.624878, y: 56.900024}
+        - {x: -59.624878, y: 20.900024}
+        - {x: -59.624878, y: -77.099976}
+        - {x: 56.375122, y: -77.099976}
+        - {x: 56.375122, y: 26.900024}
+        - {x: 49.375122, y: 49.900024}
+    - name: Jellyfishv2_Spritesheet6x5_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 56.700012}
+        - {x: -36, y: 56.700012}
+        - {x: -57, y: 47.700012}
+        - {x: -62, y: 6.700012}
+        - {x: -62, y: -75.29999}
+        - {x: 57, y: -75.29999}
+        - {x: 57, y: 17.700012}
+        - {x: 33, y: 55.700012}
+    - name: Jellyfishv2_Spritesheet6x5_19
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63.724976, y: 56.700012}
+        - {x: -63.724976, y: -73.29999}
+        - {x: 59.275024, y: -73.29999}
+        - {x: 59.275024, y: 17.700012}
+        - {x: 47.275024, y: 56.700012}
+    - name: Jellyfishv2_Spritesheet6x5_20
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.550049, y: 56.700012}
+        - {x: -32.44995, y: 56.700012}
+        - {x: -42.44995, y: 46.700012}
+        - {x: -61.44995, y: 12.700012}
+        - {x: -64.44995, y: 6.700012}
+        - {x: -64.44995, y: -62.299988}
+        - {x: -62.44995, y: -71.29999}
+        - {x: 61.55005, y: -71.29999}
+        - {x: 61.55005, y: 23.700012}
+        - {x: 57.55005, y: 43.700012}
+    - name: Jellyfishv2_Spritesheet6x5_21
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.674927, y: 56.700012}
+        - {x: -61.674927, y: 49.700012}
+        - {x: -65.67493, y: 27.700012}
+        - {x: -65.67493, y: -69.29999}
+        - {x: 63.325073, y: -69.29999}
+        - {x: 63.325073, y: 25.700012}
+        - {x: 37.325073, y: 56.700012}
+    - name: Jellyfishv2_Spritesheet6x5_22
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64.1001, y: 44.700012}
+        - {x: 55.100098, y: 56.700012}
+        - {x: -39.899902, y: 56.700012}
+        - {x: -68.8999, y: 36.700012}
+        - {x: -68.8999, y: -61.299988}
+        - {x: -67.8999, y: -65.29999}
+        - {x: -63.899902, y: -67.29999}
+        - {x: 64.1001, y: -67.29999}
+    - name: Jellyfishv2_Spritesheet6x5_23
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57.624878, y: 56.700012}
+        - {x: -69.62488, y: 10.700012}
+        - {x: -69.62488, y: -64.29999}
+        - {x: -68.62488, y: -65.29999}
+        - {x: 66.37512, y: -65.29999}
+        - {x: 66.37512, y: 56.700012}
+    - name: Jellyfishv2_Spritesheet6x5_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68, y: -59.5}
+        - {x: 68, y: 56.5}
+        - {x: -72, y: 56.5}
+        - {x: -73, y: 43.5}
+        - {x: -73, y: -57.5}
+        - {x: -69, y: -63.5}
+        - {x: -62, y: -63.5}
+        - {x: -60, y: -59.5}
+        - {x: -32, y: -63.5}
+        - {x: 67, y: -63.5}
+    - name: Jellyfishv2_Spritesheet6x5_25
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69.275024, y: 4.5}
+        - {x: 65.275024, y: 32.5}
+        - {x: 52.275024, y: 56.5}
+        - {x: -63.724976, y: 56.5}
+        - {x: -73.724976, y: 15.5}
+        - {x: -73.724976, y: -61.5}
+        - {x: -62.724976, y: -61.5}
+        - {x: -58.724976, y: -55.5}
+        - {x: -13.724976, y: -61.5}
+        - {x: 69.275024, y: -61.5}
+    - name: Jellyfishv2_Spritesheet6x5_26
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.55005, y: 56.5}
+        - {x: -32.44995, y: 56.5}
+        - {x: -63.44995, y: 47.5}
+        - {x: -74.44995, y: 13.5}
+        - {x: -74.44995, y: -57.5}
+        - {x: -69.44995, y: -59.5}
+        - {x: 67.55005, y: -59.5}
+        - {x: 72.55005, y: -56.5}
+        - {x: 72.55005, y: 27.5}
+    - name: Jellyfishv2_Spritesheet6x5_27
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76.67493, y: 56.5}
+        - {x: -76.67493, y: -57.5}
+        - {x: 74.32507, y: -57.5}
+        - {x: 74.32507, y: 25.5}
+        - {x: 65.32507, y: 56.5}
+    - name: Jellyfishv2_Spritesheet6x5_28
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.899902, y: 56.5}
+        - {x: -78.8999, y: 24.5}
+        - {x: -78.8999, y: -55.5}
+        - {x: 75.1001, y: -55.5}
+        - {x: 75.1001, y: 19.5}
+        - {x: 47.100098, y: 56.5}
+    - name: Jellyfishv2_Spritesheet6x5_29
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54.624878, y: 56.5}
+        - {x: -80.62488, y: 38.5}
+        - {x: -80.62488, y: -52.5}
+        - {x: 76.37512, y: -52.5}
+        - {x: 76.37512, y: 28.5}
+        - {x: 68.37512, y: 56.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

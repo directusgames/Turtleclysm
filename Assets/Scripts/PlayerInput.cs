@@ -27,9 +27,10 @@ public class PlayerInput : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        //To control bubbles emission, need to get the emitter
         em = bubbles.emission;
         em.enabled = false;
-        Debug.Log ("Bubbles set to false");
+        
         originDepth = m_playerPos.position.y;
 		//m_speed = 5f;
 		m_cooldownLength = 2.3f;
@@ -92,7 +93,6 @@ public class PlayerInput : MonoBehaviour
             anim.SetBool ("slowingDown", false);
             anim.SetBool ("idle", false);
             anim.SetBool ("propelled", true);
-            Debug.Log ("Propelled = true");
             anim.CrossFade ("Propelling", 0f);
             
 			m_cooldown = true;
