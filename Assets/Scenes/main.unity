@@ -722,7 +722,7 @@ MonoBehaviour:
   anim: {fileID: 236112429}
   m_cooldown: 0
   m_cooldownLength: 2.3
-  m_speed: 35
+  m_speed: 160
   currentDepth: 0
   originDepth: 0
 --- !u!50 &585329044
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 585329043}
-  intensityDecreaseRate: 20
+  intensityDecreaseRate: 300
 --- !u!1 &1150418079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1762,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: 0.14136243
+    radius: 5.87
     angle: 5.51521
     length: 5
     boxX: 1
@@ -1783,7 +1783,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 1
     rate:
-      scalar: 5
+      scalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
