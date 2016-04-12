@@ -90,6 +90,7 @@ public class PlayerInput : MonoBehaviour
             
             m_rigidBody.velocity = diffPos.normalized * m_speed;
             turtleImage.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
             anim.SetBool ("slowingDown", false);
             anim.SetBool ("idle", false);
             anim.SetBool ("propelled", true);
@@ -99,4 +100,14 @@ public class PlayerInput : MonoBehaviour
 			m_timeWaited = 0;
 		}
 	}
+    
+    public void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "npc")
+        {
+            anim.CrossFade("Chomp", 0f);
+            Destroy (coll.gameObject, 0.25f);
+            
+        }
+    }
 }
