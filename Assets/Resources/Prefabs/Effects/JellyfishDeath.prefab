@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419168}
+  - 114: {fileID: 11456644}
   - 198: {fileID: 19898994}
   - 199: {fileID: 19958332}
   m_Layer: 0
@@ -29,6 +30,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11456644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b689a5824e9724eba746330d0775e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 1.2
 --- !u!198 &19898994
 ParticleSystem:
   m_ObjectHideFlags: 1

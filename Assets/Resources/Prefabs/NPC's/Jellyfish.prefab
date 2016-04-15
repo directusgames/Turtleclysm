@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 116928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -263.39066, y: -67.91969, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,10 +92,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
-  minSize: 0
-  maxSize: 0
+  minSize: 0.4
+  maxSize: 0.6
   size: 0
   sizeAddition: 0
+  minDepth: 0
+  maxDepth: 0
   deathEffect: {fileID: 125540, guid: 3410cb9fca0b225449abafc6b6141601, type: 2}
 --- !u!212 &21255786
 SpriteRenderer:
