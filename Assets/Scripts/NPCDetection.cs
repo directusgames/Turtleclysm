@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NPCDetection : MonoBehaviour {
     
-    public PlayerInput pi;
+    public PlayerInput2 pi;
     
 	// Use this for initialization
 	void Start () {
@@ -15,8 +15,8 @@ public class NPCDetection : MonoBehaviour {
 	
 	}
     
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        pi.OnTriggerEnter2D(coll);
-    }
+//    void OnTriggerEnter2D(Collider2D coll)
+//    {
+//        pi.OnTriggerEnter2D(coll);
+//    }
 }

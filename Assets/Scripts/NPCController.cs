@@ -25,7 +25,7 @@ public class NPCController : MonoBehaviour {
 	
 	}
     
-    void OnDestroy()
+    public void DisplayDeathEffect()
     {
         GameObject exp = (GameObject) Instantiate(deathEffect, transform.position, Quaternion.identity);
     }

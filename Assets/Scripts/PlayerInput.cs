@@ -106,7 +106,9 @@ public class PlayerInput : MonoBehaviour
         if(coll.gameObject.tag == "npc")
         {
             anim.CrossFade("Chomp", 0f);
-            Destroy (coll.gameObject, 0.25f);
+            NPCController npc = coll.gameObject.GetComponent<NPCController>();
+            npc.DisplayDeathEffect();
+            Destroy (coll.gameObject);
             
         }
     }
