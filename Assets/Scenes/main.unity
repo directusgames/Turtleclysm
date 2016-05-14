@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6fec3b2859f514a92dacd10d3aabbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pi: {fileID: 585329045}
+  pi: {fileID: 0}
 --- !u!58 &236112432
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -740,7 +740,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 585329042}
   - 50: {fileID: 585329044}
-  - 114: {fileID: 585329045}
+  - 114: {fileID: 585329043}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -764,6 +764,28 @@ Transform:
   - {fileID: 1366789696}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &585329043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585329041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73156555e08e01f48990aa0e712ca765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerPos: {fileID: 585329042}
+  turtleImage: {fileID: 236112430}
+  m_rigidBody: {fileID: 585329044}
+  bubbles: {fileID: 1292374776}
+  oceanBrightness: {fileID: 0}
+  anim: {fileID: 236112429}
+  m_cooldown: 0
+  m_cooldownLength: 2.3
+  m_speed: 150
+  currentDepth: 0
+  originDepth: 0
 --- !u!50 &585329044
 Rigidbody2D:
   serializedVersion: 2
@@ -781,32 +803,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &585329045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 585329041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e28e0445f9e00c4b9c7ec74fc399473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerPos: {fileID: 585329042}
-  turtleImage: {fileID: 236112430}
-  m_rigidBody: {fileID: 585329044}
-  bubbles: {fileID: 1292374776}
-  oceanBrightness: {fileID: 0}
-  debugText: {fileID: 2057419184}
-  anim: {fileID: 236112429}
-  m_cooldown: 0
-  m_cooldownLength: 2.3
-  maxSpeed: 150
-  currentDepth: 0
-  originDepth: 0
-  smoothTime: 0.8
-  slowDownThreshold: 50
-  stopThreshold: 1
 --- !u!1 &645377968
 GameObject:
   m_ObjectHideFlags: 0

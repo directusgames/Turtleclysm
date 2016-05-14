@@ -21,7 +21,9 @@ public class LightController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
     
-        oceanBrightness.intensity = maxIntensity - (playerInput.currentDepth / intensityDecreaseRate);
+        oceanBrightness.intensity = Mathf.Clamp(maxIntensity - (playerInput.currentDepth / intensityDecreaseRate), 0f, maxIntensity);
+
+
 	
 	}
 }
