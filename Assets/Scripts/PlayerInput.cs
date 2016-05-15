@@ -27,8 +27,8 @@ public class PlayerInput : MonoBehaviour
     
     private bool facingRight;
     
-    public float angle;
-    
+    private float angle;
+    public float curveSpeed;
 
 
 	// Use this for initialization
@@ -53,7 +53,12 @@ public class PlayerInput : MonoBehaviour
         currentDepth = originDepth - m_playerPos.position.y;
         debugText.text = "Velocity: " + m_rigidBody.velocity;
         
-		if (m_cooldown) {
+        if(!m_cooldown) {
+            //Debug.Log ("cooldown disegaged");
+            MoveTurtle();
+            
+        }        
+		else if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
 				m_cooldown = false;
                 
@@ -82,16 +87,13 @@ public class PlayerInput : MonoBehaviour
 	// Update is called once prior to each 'physics step'.
 	void FixedUpdate ()
 	{
-		if (!m_cooldown) {
-			//Debug.Log ("cooldown disegaged");
-            TouchInput();
-            
-		} else {
-			//Debug.Log ("cooldown engaged");
-		}
+        if(m_cooldown)
+        {
+            CurveTurtle();
+        }
 	}
 
-	void TouchInput() {
+	void MoveTurtle() {
 		if (Input.touchCount == 1) {
             em.enabled = true;
 			Touch currentTouch = Input.GetTouch(0);
@@ -135,34 +137,100 @@ public class PlayerInput : MonoBehaviour
         }
     }
     
+    //If the turtle is moving left, we need to flip the sprite orientation so that the turtle remains the 'right way up'
     void FlipRotation()
     {
-        if((m_rigidBody.velocity.x > 0 && m_rigidBody.velocity.y > 0) || (m_rigidBody.velocity.x > 0 && m_rigidBody.velocity.y < 0))
+        //If turtle moves right
+        if(m_rigidBody.velocity.x > 0 )
         {
-            Debug.Log ("Pressed on the right");
+            //if turtle was not already facing right, flip them
             if(!facingRight)
             {
                 turtleImage.localScale = new Vector3(turtleImage.localScale.x, -turtleImage.localScale.y, turtleImage.localScale.z);
-                Debug.Log ("Turtle wasn't facing right");
                 facingRight = true;
             }
         }
+        //Else if turtle moves left
         else
         {
+            //if turtle was not already facing left, flip them
             if(facingRight)
             {
-                Debug.Log ("Pressed on the left");
-                //Debug.Log ("Turtle was facing right");
-                //Quaternion newRot = new Quaternion(turtleImage.transform.rotation.x, -turtleImage.transform.rotation.y, turtleImage.transform.rotation.z, -turtleImage.transform.rotation.w);
-                //transform.eulerAngles = new Vector3(0f,180f,0f);
-                //turtleImage.transform.eulerAngles = Vector3.Reflect(turtleImage.transform.rotation.eulerAngles, Vector3.up);
                 turtleImage.localScale = new Vector3(turtleImage.localScale.x, -turtleImage.localScale.y, turtleImage.localScale.z);
                 facingRight = false ;
             }
-            //                else
-            //                {
-            //                    turtleImage.transform.eulerAngles = new Vector3(0,180,turtleImage.transform.rotation.eulerAngles.z);
-            //                }
         }
     }
+    
+    void CurveTurtle()
+    {
+        if (Input.touchCount == 1)
+        {
+            Touch currentTouch = Input.GetTouch(0);
+            Vector2 currentPos = m_playerPos.position;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(currentTouch.position);
+            
+            //worldPos.Normalize();
+            
+            Vector2 diffPos = worldPos - m_playerPos.position;
+            diffPos.Normalize();
+            
+            angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;
+            float ang = Vector2.Angle(turtleImage.transform.right, diffPos);
+            //angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;
+            //Debug.Log (Vector2.Angle(new Vector2(worldPos.x,worldPos.y), new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y)));
+//            Debug.DrawLine (m_playerPos.position, m_playerPos.position + (diffPos*100f));
+//            Debug.DrawLine (m_playerPos.position, turtleImage.transform.position + (turtleImage.transform.right * 100f));
+            Vector3 cross = Vector3.Cross (turtleImage.transform.right, diffPos);
+            
+            if(cross.z > 0)
+            {
+                ang = 360 - ang;
+            }
+            
+            if(facingRight)
+            {
+                if(ang > 0 && ang < 180)
+                {
+                    //Force down
+                    //Debug.Log ("Push down!");
+                    //m_rigidBody.AddForce(-transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
+                    //m_playerPos.position += (-turtleImage.transform.up * curveSpeed);
+                    m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed;        
+                   
+                }
+                else
+                {
+                    //Force up
+                    //Debug.Log ("Push up!");
+                    //m_rigidBody.velocity = diffPos.normalized * m_speed;
+                    //m_rigidBody.AddForce(transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
+                    //m_playerPos.position += (turtleImage.transform.up * curveSpeed);
+                    m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed; 
+                }
+            }
+            else
+            {
+                if(ang > 0 && ang < 180)
+                {
+                    //Force up
+                    //Debug.Log ("Push up!");
+                    //m_rigidBody.AddForce(transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
+                    //m_playerPos.position += (turtleImage.transform.up * curveSpeed);
+                    m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed; 
+                }
+                else
+                {
+                    //Force Down
+                    //Debug.Log ("Push down!");
+                    //m_rigidBody.AddForce(-transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
+                    //m_playerPos.position += (-turtleImage.transform.up * curveSpeed); 
+                    m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed; 
+                }
+            }   
+                        
+        }
+    }
+    
+
 }
