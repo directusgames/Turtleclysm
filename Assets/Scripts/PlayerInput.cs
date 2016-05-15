@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerInput : MonoBehaviour
@@ -8,7 +9,7 @@ public class PlayerInput : MonoBehaviour
 	public Rigidbody2D m_rigidBody;
     public ParticleSystem bubbles;
     public Light oceanBrightness;
-    
+    public Text debugText;
     public Animator anim;
 
 	public bool m_cooldown = false; // True: in cooldown, False: not in cooldown.
@@ -20,13 +21,20 @@ public class PlayerInput : MonoBehaviour
     public float currentDepth;
     public float originDepth;
     
+    private float curAngle;
+    
     private ParticleSystem.EmissionModule em;
+    
+    private bool facingRight;
+    
+    public float angle;
     
 
 
 	// Use this for initialization
 	void Start ()
 	{
+        curAngle = 0;
         //To control bubbles emission, need to get the emitter
         em = bubbles.emission;
         em.enabled = false;
@@ -35,11 +43,15 @@ public class PlayerInput : MonoBehaviour
 		//m_speed = 5f;
 		m_cooldownLength = 2.3f;
 		m_cooldown = false;
+        
+        facingRight = true;
+        
 	}
 
 	void Update() {
     
         currentDepth = originDepth - m_playerPos.position.y;
+        debugText.text = "Velocity: " + m_rigidBody.velocity;
         
 		if (m_cooldown) {
 			if (m_timeWaited >= m_cooldownLength) {
@@ -72,24 +84,30 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (!m_cooldown) {
 			//Debug.Log ("cooldown disegaged");
-            swipeInput();
+            TouchInput();
             
 		} else {
 			//Debug.Log ("cooldown engaged");
 		}
 	}
 
-	void swipeInput() {
+	void TouchInput() {
 		if (Input.touchCount == 1) {
             em.enabled = true;
 			Touch currentTouch = Input.GetTouch(0);
 			Vector2 currentPos = m_playerPos.position;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(currentTouch.position);
 			Vector2 diffPos = new Vector2(worldPos.x, worldPos.y) - currentPos;
-            float angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;			
+            angle = Mathf.Atan2(diffPos.y, diffPos.x) * Mathf.Rad2Deg;			
             
             m_rigidBody.velocity = diffPos.normalized * m_speed;
-            turtleImage.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
+            turtleImage.transform.Rotate(0,0,angle - curAngle);
+            curAngle = angle;
+            
+            
+            Debug.Log ("Rotate to: " + angle);
+
             
             anim.SetBool ("slowingDown", false);
             anim.SetBool ("idle", false);
@@ -98,7 +116,11 @@ public class PlayerInput : MonoBehaviour
             
 			m_cooldown = true;
 			m_timeWaited = 0;
-		}
+            
+            FlipRotation();
+            
+            //turtleImage.transform.rotation = Quaternion.Euler(new Vector3(0,0,angle));
+    	}
 	}
     
     public void OnTriggerEnter2D(Collider2D coll)
@@ -110,6 +132,37 @@ public class PlayerInput : MonoBehaviour
             npc.DisplayDeathEffect();
             Destroy (coll.gameObject);
             
+        }
+    }
+    
+    void FlipRotation()
+    {
+        if((m_rigidBody.velocity.x > 0 && m_rigidBody.velocity.y > 0) || (m_rigidBody.velocity.x > 0 && m_rigidBody.velocity.y < 0))
+        {
+            Debug.Log ("Pressed on the right");
+            if(!facingRight)
+            {
+                turtleImage.localScale = new Vector3(turtleImage.localScale.x, -turtleImage.localScale.y, turtleImage.localScale.z);
+                Debug.Log ("Turtle wasn't facing right");
+                facingRight = true;
+            }
+        }
+        else
+        {
+            if(facingRight)
+            {
+                Debug.Log ("Pressed on the left");
+                //Debug.Log ("Turtle was facing right");
+                //Quaternion newRot = new Quaternion(turtleImage.transform.rotation.x, -turtleImage.transform.rotation.y, turtleImage.transform.rotation.z, -turtleImage.transform.rotation.w);
+                //transform.eulerAngles = new Vector3(0f,180f,0f);
+                //turtleImage.transform.eulerAngles = Vector3.Reflect(turtleImage.transform.rotation.eulerAngles, Vector3.up);
+                turtleImage.localScale = new Vector3(turtleImage.localScale.x, -turtleImage.localScale.y, turtleImage.localScale.z);
+                facingRight = false ;
+            }
+            //                else
+            //                {
+            //                    turtleImage.transform.eulerAngles = new Vector3(0,180,turtleImage.transform.rotation.eulerAngles.z);
+            //                }
         }
     }
 }
