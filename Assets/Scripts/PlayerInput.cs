@@ -90,13 +90,7 @@ public class PlayerInput : MonoBehaviour
                     anim.SetBool ("slowingDown", true);
                 }
 			}
-		}
-        
-        //testing
-//        if(Input.GetKey (KeyCode.DownArrow))
-//        {
-//            currentDepth += 0.1f;
-//        }
+		}        
     }
 
 	// Update is called once prior to each 'physics step'.
@@ -122,10 +116,7 @@ public class PlayerInput : MonoBehaviour
             turtleImage.transform.Rotate(0,0,angle - curAngle);
             curAngle = angle;
             
-            
-            Debug.Log ("Rotate to: " + angle);
-
-            
+ 
             anim.SetBool ("slowingDown", false);
             anim.SetBool ("idle", false);
             anim.SetBool ("propelled", true);
@@ -136,7 +127,6 @@ public class PlayerInput : MonoBehaviour
             
             FlipRotation();
             
-            //turtleImage.transform.rotation = Quaternion.Euler(new Vector3(0,0,angle));
     	}
 	}
     
