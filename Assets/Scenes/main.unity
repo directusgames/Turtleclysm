@@ -845,7 +845,7 @@ MonoBehaviour:
   m_speed: 150
   currentDepth: 0
   originDepth: 0
-  curveSpeed: 1
+  curveSpeed: 2
 --- !u!50 &585329044
 Rigidbody2D:
   serializedVersion: 2

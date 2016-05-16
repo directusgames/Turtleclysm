@@ -27,6 +27,8 @@ public class PlayerInput : MonoBehaviour
     
     private bool facingRight;
     
+    public bool touchHeld;
+    
     private float angle;
     public float curveSpeed;
 
@@ -55,7 +57,20 @@ public class PlayerInput : MonoBehaviour
         
         if(!m_cooldown) {
             //Debug.Log ("cooldown disegaged");
-            MoveTurtle();
+            if(!touchHeld)
+            {
+                MoveTurtle();
+            }
+            else
+            {
+                if(Input.touchCount == 1)
+                {
+                    if(Input.GetTouch(0).phase == TouchPhase.Ended)
+                    {
+                        touchHeld = false;
+                    }   
+                }
+            }
             
         }        
 		else if (m_cooldown) {
@@ -166,6 +181,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.touchCount == 1)
         {
+            touchHeld = true;
             Touch currentTouch = Input.GetTouch(0);
             Vector2 currentPos = m_playerPos.position;
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(currentTouch.position);
@@ -196,7 +212,8 @@ public class PlayerInput : MonoBehaviour
                     //Debug.Log ("Push down!");
                     //m_rigidBody.AddForce(-transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
                     //m_playerPos.position += (-turtleImage.transform.up * curveSpeed);
-                    m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed;        
+                    //m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed;
+                    m_rigidBody.velocity = new Vector2(m_rigidBody.velocity.x, m_rigidBody.velocity.y - (turtleImage.transform.up.y*curveSpeed));
                    
                 }
                 else
@@ -206,7 +223,8 @@ public class PlayerInput : MonoBehaviour
                     //m_rigidBody.velocity = diffPos.normalized * m_speed;
                     //m_rigidBody.AddForce(transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
                     //m_playerPos.position += (turtleImage.transform.up * curveSpeed);
-                    m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed; 
+                    //m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed;
+                    m_rigidBody.velocity = new Vector2(m_rigidBody.velocity.x, m_rigidBody.velocity.y + (turtleImage.transform.up.y*curveSpeed));
                 }
             }
             else
@@ -217,7 +235,8 @@ public class PlayerInput : MonoBehaviour
                     //Debug.Log ("Push up!");
                     //m_rigidBody.AddForce(transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
                     //m_playerPos.position += (turtleImage.transform.up * curveSpeed);
-                    m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed; 
+                    //m_rigidBody.velocity += new Vector2(-turtleImage.transform.up.x, -turtleImage.transform.up.y) * curveSpeed;
+                    m_rigidBody.velocity = new Vector2(m_rigidBody.velocity.x, m_rigidBody.velocity.y - (turtleImage.transform.up.y*curveSpeed));
                 }
                 else
                 {
@@ -225,10 +244,15 @@ public class PlayerInput : MonoBehaviour
                     //Debug.Log ("Push down!");
                     //m_rigidBody.AddForce(-transform.up * (m_cooldownLength - m_timeWaited) * curveSpeed);
                     //m_playerPos.position += (-turtleImage.transform.up * curveSpeed); 
-                    m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed; 
+                    //m_rigidBody.velocity += new Vector2(turtleImage.transform.up.x, turtleImage.transform.up.y) * curveSpeed;
+                    m_rigidBody.velocity = new Vector2(m_rigidBody.velocity.x, m_rigidBody.velocity.y + (turtleImage.transform.up.y*curveSpeed));
                 }
             }   
                         
+        }
+        else
+        {
+            touchHeld = false;
         }
     }
     
