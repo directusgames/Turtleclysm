@@ -130,18 +130,6 @@ public class PlayerInput : MonoBehaviour
     	}
 	}
     
-    public void OnTriggerEnter2D(Collider2D coll)
-    {
-        if(coll.gameObject.tag == "npc")
-        {
-            anim.CrossFade("Chomp", 0f);
-            NPCController npc = coll.gameObject.GetComponent<NPCController>();
-            npc.DisplayDeathEffect();
-            Destroy (coll.gameObject);
-            
-        }
-    }
-    
     //If the turtle is moving left, we need to flip the sprite orientation so that the turtle remains the 'right way up'
     void FlipRotation()
     {
@@ -246,5 +234,29 @@ public class PlayerInput : MonoBehaviour
         }
     }
     
+    public void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "npc")
+        {
+            anim.CrossFade("Chomp", 0f);
+            NPCController npc = coll.gameObject.GetComponent<NPCController>();
+            IncreaseScale(npc.sizeAddition);
+            npc.DisplayDeathEffect();
+            Destroy (coll.gameObject);
+            
+        }
+    }
+    
+    void IncreaseScale(float inc)
+    {
+        if(turtleImage.localScale.y > 0)
+        {
+            turtleImage.localScale = new Vector3(turtleImage.localScale.x + inc, turtleImage.localScale.y + inc, 1);
+        }
+        else
+        {
+            turtleImage.localScale = new Vector3(turtleImage.localScale.x + inc, turtleImage.localScale.y - inc, 1);
+        }
+    }
 
 }

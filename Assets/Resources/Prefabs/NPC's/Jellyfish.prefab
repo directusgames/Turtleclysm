@@ -95,7 +95,7 @@ MonoBehaviour:
   minSize: 0.4
   maxSize: 0.6
   size: 0
-  sizeAddition: 0
+  sizeAddition: 0.1
   minDepth: 0
   maxDepth: 0
   deathEffect: {fileID: 125540, guid: 3410cb9fca0b225449abafc6b6141601, type: 2}
